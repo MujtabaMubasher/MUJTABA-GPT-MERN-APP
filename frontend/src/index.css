@@ -1,0 +1,90 @@
+@import url('https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+html, body{
+  margin: 0;
+  padding: 0;
+  background: #001414;
+  color: white;
+  font-family: "Roboto Slab", serif;
+}
+#root{
+  min-width: 950px;
+}
+
+.image-inverted{
+  filter: invert(100%);
+}
+
+.nav-link{
+  font-weight: 600;
+  font-size: 18px;
+  text-transform: uppercase;
+  margin: 0px 10px 0px 10px;
+  padding: 10px 10px;
+  border-radius: 8px;
+  text-decoration: none;
+  letter-spacing: 1px;
+}
+
+.rotate {
+  animation: rotation 6s infinite linear;
+}
+
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.motion {
+  width: 205px;
+  margin: auto;
+  animation: moveRotate  9s ease-out infinite;
+}
+
+@keyframes moveRotate {
+ 
+  25% {
+    transform: rotate(-8deg);
+  }
+   50% {
+    transform: rotate(8deg);
+  }
+}
+
+
+.animation {
+  font-size: 30px;
+  text-align: center;
+  overflow: hidden;
+  border-right: 2px solid rgba(0, 20, 20, 0); /* Simulate cursor */
+  white-space: nowrap; /* Prevent line break */
+  animation: typing 4s ease  infinite;
+}
+
+@keyframes typing {
+  from {
+      width: 0;
+  }
+  to {
+      width: 100%;
+  }
+}
+
+.cursor {
+  display: inline-block;
+  width: 0.2em; /* Adjust cursor width */
+  height: 1em;
+  vertical-align: middle;
+  background-color: rgb(242, 221, 221); /* Cursor color */
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% {
+      opacity: 0;
+  }
+}
