@@ -10,7 +10,7 @@ import axios from 'axios'
 import {Toaster} from 'react-hot-toast'
 
  axios.defaults.baseURL =
-  "http://localhost:5000/api/v1";
+  "https://render-ai-chat-bot-backend.vercel.app/api/v1";
  // For Helping to Exchange the cookies with backend
  axios.defaults.withCredentials = true
 const theme = createTheme({
