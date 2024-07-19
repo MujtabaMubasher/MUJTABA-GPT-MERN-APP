@@ -22,8 +22,8 @@ const AuthProvider = ({children}: {children: ReactNode}) => {
   const [user, setUser] = useState<User | null>(null)
   const [isLogedIn, setIsLogedIn] = useState(false);
 
-  useEffect(()=>{
-    // fetch if the user's cookies are valid then skip Login
+  // useEffect(()=>{
+  //   fetch if the user's cookies are valid then skip Login
 
   //   async function authStatus() {
   //     const data = await checkAuthStatus();
