@@ -1,87 +1,92 @@
 import { createContext, ReactNode, useContext, useEffect, useState } from "react";
-import { checkAuthStatus, loginUser,logoutUser,signupUser } from "../helpers/api-communicator";
-
+import { checkAuthStatus, loginUser, logoutUser, signupUser } from "../helpers/api-communicator";
 
 type User = {
-    name: string,
-    email: string
-}
+  name: string;
+  email: string;
+};
 
 type UserAuth = {
-    isLogedIn: boolean,
-    user: User | null,
-    login: (email: string, password: string) => Promise<void >
-    signup: (name: string, email: string, password: string) => Promise<void | string>
-    logout: () => Promise<void>
-}
+  isLogedIn: boolean;
+  user: User | null;
+  login: (email: string, password: string) => Promise<void>;
+  signup: (name: string, email: string, password: string) => Promise<void | string>;
+  logout: () => Promise<void | string>;
+};
 
-const AuthContext = createContext<UserAuth|null>(null)
+const AuthContext = createContext<UserAuth | null>(null);
 
-const AuthProvider = ({children}: {children: ReactNode}) => {
-
-  const [user, setUser] = useState<User | null>(null)
+const AuthProvider = ({ children }: { children: ReactNode }) => {
+  const [user, setUser] = useState<User | null>(null);
   const [isLogedIn, setIsLogedIn] = useState(false);
 
-  useEffect(()=>{
-    fetch if the user's cookies are valid then skip Login
+  useEffect(() => {
+    // Fetch the authentication status
+    const authStatus = async () => {
+      try {
+        const data = await checkAuthStatus();
+        if (data) {
+          setUser({ email: data.email, name: data.name });
+          setIsLogedIn(true);
+        }
+      } catch (error) {
+        console.error('Failed to check authentication status:', error);
+      }
+    };
+    authStatus();
+  }, []);
 
-    async function authStatus() {
-      const data = await checkAuthStatus();
+  const login = async (email: string, password: string) => {
+    try {
+      const data = await loginUser(email, password);
       if (data) {
         setUser({ email: data.email, name: data.name });
         setIsLogedIn(true);
+        // Avoid reloading the page if possible
+        // Use state updates to reflect changes
       }
+    } catch (error) {
+      console.error('Login failed:', error);
     }
-    authStatus();
-  },[])
-  
-  const login = async (email: string, password: string) => {
-    const data = await loginUser(email, password);
-    //console.log(data);
-    if (data) {
-      setUser({ email: data.email, name: data.username });
-      setIsLogedIn(true);
-      setTimeout(()=>{
-        window.location.reload()
-      }, 0)
-  }
- }
+  };
 
-  const signup = async(username: string, email: string, password: string) =>{
-     const data = await signupUser(username,email,password)
-     if (data) {
-       return data.message
-     }
-  }
-
-
-  const logout = async() =>{
-    const userlogout = await logoutUser()
-    if (userlogout.message) {
-       setUser(null)
-       setIsLogedIn(false)
-       setTimeout(()=>{
-        window.location.reload()
-       }, 500)
-       return userlogout.message
+  const signup = async (name: string, email: string, password: string) => {
+    try {
+      const data = await signupUser(name, email, password);
+      if (data && data.message) {
+        return data.message;
+      }
+    } catch (error) {
+      console.error('Signup failed:', error);
     }
-    
-  }
+  };
+
+  const logout = async () => {
+    try {
+      const userlogout = await logoutUser();
+      if (userlogout && userlogout.message) {
+        setUser(null);
+        setIsLogedIn(false);
+        // Avoid reloading the page if possible
+        // Use state updates to reflect changes
+        return userlogout.message;
+      }
+    } catch (error) {
+      console.error('Logout failed:', error);
+    }
+  };
 
   const value = {
     user,
     isLogedIn,
     login,
     signup,
-    logout
-  }
+    logout,
+  };
 
-  return <AuthContext.Provider value={value}>
-     {children}
-  </AuthContext.Provider>
+  return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
+};
 
-}
+const useAuth = () => useContext(AuthContext);
 
-const useAuth = () => useContext(AuthContext)
-
-export {AuthProvider,useAuth}
+export { AuthProvider, useAuth };
