@@ -1,7 +1,7 @@
 import axios from "axios";
 
 axios.defaults.baseURL =
-  "http://localhost:5173//api/v1";
+  "https://render-ai-chat-bot-backend.vercel.app/api/v1";
 axios.defaults.withCredentials = true;
 
 const loginUser = async (email: string, password: string) => {
