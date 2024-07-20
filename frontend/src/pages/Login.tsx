@@ -33,6 +33,16 @@ function Login() {
         console.log(message);
         if (message) {
           toast.success(message, { id: "signup" })
+        }else{
+           if (axios.isAxiosError(error)) {
+           let message = ""
+          if (error.response && error.response.data) {
+              message = error.response.data;
+          } else {
+              message = "An unexpected error occurred";
+          }
+          toast.error(message, { id: "Login" });
+         }
         }
       }
     } catch (error) {
