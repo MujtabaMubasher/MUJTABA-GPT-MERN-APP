@@ -28,11 +28,13 @@ function Login() {
     }
     //console.log(email,password);
    try {
+
+      toast.loading("Signin",{ id: "signin" })
       if (auth) {
         const message = await auth?.login(email, password);
         console.log(message);
         if (message) {
-          toast.success(message, { id: "signup" })
+          toast.success(message, { id: "signin" })
         }
       }
     } catch (error: any) {
