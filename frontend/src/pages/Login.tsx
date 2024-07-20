@@ -36,7 +36,7 @@ function Login() {
         }
       }
     } catch (error: any) {
-      //console.log(error);
+      console.log(error);
         if (error) {
            let message = ""
           if (error.response && error.response.data) {
