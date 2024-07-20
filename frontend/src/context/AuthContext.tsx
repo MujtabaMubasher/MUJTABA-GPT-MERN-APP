@@ -46,7 +46,7 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
         // Use state updates to reflect changes
       }
       //console.log(data);
-      return data
+      return data.message
     } catch (error) {
       console.error('Login failed:', error);
     }
