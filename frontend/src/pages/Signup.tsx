@@ -27,7 +27,7 @@ function Signup() {
       return;
     }
     //console.log(email,password);
-    if (!auth) {
+    if (auth) {
       try {
           toast.loading("Creating Account",{ id: "signup" })
            const message = await auth?.signup(username,email, password);
