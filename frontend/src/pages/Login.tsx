@@ -3,7 +3,7 @@ import Input from "../components/shared/Input";
 import { IoIosLogIn } from "react-icons/io";
 import { useAuth } from "../context/AuthContext";
 import toast from "react-hot-toast";
-//import axios from "axios";
+import axios from "axios";
 import { useNavigate  } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -37,7 +37,7 @@ function Login() {
       }
     } catch (error: any) {
       console.log(error);
-        if (error) {
+       if (axios.isAxiosError(error)) {
            let message = ""
           if (error.response && error.response.data) {
               message = error.response.data;
