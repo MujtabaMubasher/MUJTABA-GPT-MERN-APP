@@ -34,7 +34,7 @@ function Login() {
         if (message) {
           toast.success(message, { id: "signup" })
         }else{
-          toast.error(message:string)
+          toast.error(message);
         }
       }
     } catch (error: any) {
