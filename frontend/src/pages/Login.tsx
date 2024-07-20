@@ -37,7 +37,7 @@ function Login() {
       }
     } catch (error) {
       //console.log(error);
-        if (axios.isAxiosError(error)) {
+        if (error) {
            let message = ""
           if (error.response && error.response.data) {
               message = error.response.data;
