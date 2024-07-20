@@ -22,7 +22,7 @@ const signupUser = async (username: string, email: string, password: string) => 
   
 
   if (res.status !== 200) {
-   return res.data.message
+   throw new Error("Unable to Signup");
   }
   const data = await res.data;
   return data;
