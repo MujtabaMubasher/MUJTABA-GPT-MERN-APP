@@ -35,7 +35,7 @@ function Login() {
           toast.success(message, { id: "signup" })
         }
       }
-    } catch (error) {
+    } catch (error: any) {
       //console.log(error);
         if (error) {
            let message = ""
