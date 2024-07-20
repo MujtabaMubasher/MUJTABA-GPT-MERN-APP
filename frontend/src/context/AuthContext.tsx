@@ -9,7 +9,7 @@ type User = {
 type UserAuth = {
   isLogedIn: boolean;
   user: User | null;
-  login: (email: string, password: string) => Promise<void>;
+  login: (email: string, password: string) => Promise<void | string>;
   signup: (name: string, email: string, password: string) => Promise<void | string>;
   logout: () => Promise<void | string>;
 };
@@ -45,6 +45,8 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
         // Avoid reloading the page if possible
         // Use state updates to reflect changes
       }
+      //console.log(data);
+      return data.message
     } catch (error) {
       console.error('Login failed:', error);
     }
