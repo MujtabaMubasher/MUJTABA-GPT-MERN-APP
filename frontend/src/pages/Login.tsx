@@ -33,8 +33,6 @@ function Login() {
         console.log(message);
         if (message) {
           toast.success(message, { id: "signup" })
-        }else{
-          toast.error("Something Went Wrong While Login")
         }
       }
     } catch (error) {
