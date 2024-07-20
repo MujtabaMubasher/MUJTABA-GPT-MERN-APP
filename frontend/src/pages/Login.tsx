@@ -3,6 +3,7 @@ import Input from "../components/shared/Input";
 import { IoIosLogIn } from "react-icons/io";
 import { useAuth } from "../context/AuthContext";
 import toast from "react-hot-toast";
+import axios from "axios";
 import { useNavigate  } from "react-router-dom";
 import { useEffect } from "react";
 
@@ -26,24 +27,27 @@ function Login() {
       return;
     }
     //console.log(email,password);
-    try {
+   try {
       if (auth) {
-        const promise: Promise<void> = auth?.login(email, password);
-        await toast.promise(
-          promise,
-          {
-            loading: "Signing In",
-            success: "Signing Successful",
-           error: () => `Incorrect Email or Password`,
-          },
-          {
-            id: "login",
-          }
-        );
+        const message = await auth?.login(email, password);
+        console.log(message);
+        if (message) {
+          toast.success(message, { id: "signup" })
+        }else{
+          toast.error("Something Went Wrong While Login")
+        }
       }
     } catch (error) {
-      console.log(error);
-      toast.loading("Signing  Faild", { id: "login" });
+      //console.log(error);
+        if (axios.isAxiosError(error)) {
+           let message = ""
+          if (error.response && error.response.data) {
+              message = error.response.data;
+          } else {
+              message = "An unexpected error occurred";
+          }
+          toast.error(message, { id: "Login" });
+        }
     }
   };
   return (
