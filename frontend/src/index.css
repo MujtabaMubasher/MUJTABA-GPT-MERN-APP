@@ -88,3 +88,20 @@ html, body{
       opacity: 0;
   }
 }
+
+/***************Responsive************** */
+
+@media (max-width: 600px) {
+  /************Header Responsive************ */
+  .header{
+    width: 42%;
+    
+  }
+  .nav-link{
+    font-size: 14.5px;
+    margin-top: -15px;
+  }
+  .btn-div{
+    margin-top: -8px;
+  }
+}
