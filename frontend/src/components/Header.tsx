@@ -33,9 +33,9 @@ function Header() {
         marginTop: "30px"
       }}
     >
-      <Toolbar sx={{ display: "flex" }}>
+      <Toolbar className='header' sx={{ display: "flex" }}>
         <Logo />
-        <div>
+        <div className='btn-div'>
           {auth?.isLogedIn ? (
             <>
               {
