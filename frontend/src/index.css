@@ -94,7 +94,7 @@ html, body{
 @media (max-width: 600px) {
   /************Header Responsive************ */
   .header{
-    width: 40%;
+    width: 95vw;
     
   }
   .nav-link{
