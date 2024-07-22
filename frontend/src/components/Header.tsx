@@ -14,7 +14,12 @@ function Header() {
   async function logoutHandler() {
      //toast.loading("Logging Out",{id: "logout"})
     try {
+      
+      console.log(auth?.isLogedIn);
+      console.log(auth?.user);
        const message = await auth?.logout()
+       console.log(auth?.isLogedIn);
+       console.log(auth?.user);
        if (message) {
          toast.success(message,{id: "logout"})
        }
