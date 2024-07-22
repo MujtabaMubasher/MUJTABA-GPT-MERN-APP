@@ -52,6 +52,30 @@ html, body{
   margin-top: 20px;
 }
 
+.chat-image{
+  display: flex;
+  margin: auto;
+  width: 900px;
+  border-radius: 30px;
+  box-shadow: -5px -5px 105px #64f3d5;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.footer-div{
+  width: 100%;
+  min-height: 10vh;
+  max-height: 30vh;
+  margin-top: 50;
+}
+#footer-p{
+  font-size: 27px;
+  text-align: center;
+}
+
+/*************Image Animation**********/
+
 .rotate {
   animation: rotation 6s infinite linear;
 }
@@ -118,6 +142,10 @@ html, body{
 /***************Responsive************** */
 
 @media (max-width: 600px) {
+  html, body{
+    overflow-x: hidden;
+    /* overflow-y: hidden; */
+  }
   /************Header Responsive************ */
   .header{
     width: 95vw;
@@ -162,7 +190,29 @@ html, body{
     /*margin-left: -100px;*/
     margin-left: 70px;
     margin-top: -12px;
-   
   }
+
+  .Chat-Iamge-Box{
+    min-width: 50px;
+  }
+
+  .chat-image{
+   width: 340px;
+   margin-left: -445px;
+   box-shadow: -5px -5px 35px #64f3d5;
+  }
+
+  /************Footer Responsive************ */
+
+  .footer{
+    margin-left: -540px;
+  }
+  .footer-div{
+    width: 100%; 
+  }
+
+  #footer-p{
+    font-size: 20px;
+  } 
 
 }
