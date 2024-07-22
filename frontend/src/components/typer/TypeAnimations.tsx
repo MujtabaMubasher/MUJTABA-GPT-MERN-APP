@@ -12,14 +12,15 @@ function TypeAnimations() {
         "Your Own Customized AI Assistant",
         1500,
       ]}
-      style={{
+{/*       style={{
         fontSize: "55px",
         color: "white",
         display: "inline-block",
         textShadow: "1px 1px 20px #000",
         fontFamily: "Roboto Slab",
-      }}
+      }} */}
       repeat={Infinity}
+      className = "type-animation"
     /> 
   )
 }
