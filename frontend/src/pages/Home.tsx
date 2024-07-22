@@ -22,6 +22,7 @@ function Home() {
          <TypeAnimations/>
         </Box>
          <Box
+          className = 'motion-img-box-home' 
           sx={{
             // width: "100%",
              display: "flex",
