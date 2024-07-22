@@ -69,7 +69,7 @@ const AuthProvider = ({ children }: { children: ReactNode }) => {
       if (userlogout && userlogout.message) {
         setUser(null);
         setIsLogedIn(false);
-        window.location.reload();
+       // window.location.reload();
         return userlogout.message;
       }
     } catch (error) {
