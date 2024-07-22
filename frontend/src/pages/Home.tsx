@@ -50,11 +50,12 @@ function Home() {
             //style={{ width: "140px", margin: "auto",marginTop: "20px"}}
           />
          </Box>
-         <Box sx={{ display: "flex", mx: "auto" }}>
+         <Box className="Chat-Iamge-Box" /*sx={{ display: "flex", mx: "auto" }}*/>
           <img
+            className="chat-image"
             src="cht.webp"
             alt="chatbot"
-            style={{
+            /*style={{
               display: "flex",
               margin: "auto",
               width: "900px",
@@ -63,7 +64,7 @@ function Home() {
               marginTop: 20,
               marginBottom: 20,
               padding: 20,
-            }}
+            }}*/
           />
         </Box>
         <Footer/>
