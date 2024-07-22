@@ -34,6 +34,24 @@ html, body{
   font-family: "Roboto Slab";
 }
 
+.motion-img-box-home{
+  display: flex;
+  margin-top: 100px;
+  margin-bottom: 100px;
+}
+
+#motion-image{
+  width: 225px; 
+  margin: auto;
+  margin-top: -20px;
+}
+
+#rotate-image{
+  width: 140px;
+  margin: auto;
+  margin-top: 20px;
+}
+
 .rotate {
   animation: rotation 6s infinite linear;
 }
@@ -125,4 +143,26 @@ html, body{
     margin-top: -200px;
     
   }
+
+  .motion-img-box-home{
+    display: flex;
+    margin-top: 70px;
+    margin-bottom: 50px; 
+  }
+
+  #motion-image{
+    width: 120px;
+    margin-left: -460px;
+    margin-top: -25px;
+    
+  }
+
+#rotate-image{
+    width: 75px;
+    /*margin-left: -100px;*/
+    margin-left: 70px;
+    margin-top: -12px;
+   
+  }
+
 }
