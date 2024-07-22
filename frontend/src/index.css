@@ -215,4 +215,26 @@ html, body{
     font-size: 20px;
   } 
 
+  /**********************IPhone************************/
+  @media (min-width: 400px) {
+    .Chat-Iamge-Box{
+      width: 40px;
+    }
+  
+    .chat-image{
+     width: 370px;
+     margin-left: -441px;
+     box-shadow: -5px -5px 35px #64f3d5;
+    }
+
+    #rotate-image{
+      width: 75px;
+      /*margin-left: -100px;*/
+      margin-left: 120px;
+      margin-top: -12px;
+     
+    }
+  
+  }
+
 }
