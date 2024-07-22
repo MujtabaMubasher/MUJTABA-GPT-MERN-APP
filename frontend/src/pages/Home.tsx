@@ -24,9 +24,9 @@ function Home() {
          <Box
           sx={{
             // width: "100%",
-             display: "flex",
+             //display: "flex",
             // flexDirection: {md: "row", xs: "none", sm: "none"},
-            gap: {md: 60, xs: 0, sm: 0},
+           // gap: {md: 60, xs: 0, sm: 0},
             // my:10,
             // alignContent: "center",
             // marginRight: "30px"
