@@ -23,28 +23,30 @@ function Home() {
         </Box>
          <Box
           sx={{
-            width: "100%",
-            display: "flex",
-            flexDirection: {md: "row", xs: "none", sm: "none"},
-            gap: 30,
-            my:10,
-            alignContent: "center",
-            marginRight: "30px"
+            // width: "100%",
+             display: "flex",
+            // flexDirection: {md: "row", xs: "none", sm: "none"},
+            gap: {md: 60, xs: 0, sm: 0},
+            // my:10,
+            // alignContent: "center",
+            // marginRight: "30px"
           }}
          >
            <img
             className="motion"
+            id="motion-image"
             src="botAI.png"
             alt="robot"
-            style={{ width: "225px", margin: "auto", marginTop: "-20px" }}
+            //style={{ width: "225px", margin: "auto", marginTop: "-20px" }}
 
 
           />
           <img
             className="rotate"
+            id ="rotate-image"
             src="meta.png"
             alt="openai"
-            style={{ width: "140px", margin: "auto",marginTop: "20px"}}
+            //style={{ width: "140px", margin: "auto",marginTop: "20px"}}
           />
          </Box>
          <Box sx={{ display: "flex", mx: "auto" }}>
