@@ -236,5 +236,40 @@ html, body{
     }
   
   }
+ /**********************Andriod************************/
+  @media (max-width: 360px) {
+    .Chat-Iamge-Box{
+      /* min-width: 60px; */
+    }
+  
+    .chat-image{
+     width: 300px;
+     margin-left: -440px;
+     box-shadow: -5px -5px 35px #64f3d5;
+    }
+
+    .type-animation{
+      font-size: 5vw;
+      margin-left: -5px;
+      margin-top: -200px;
+      
+    }
+
+    #rotate-image{
+      width: 75px;
+      /*margin-left: -100px;*/
+      margin-left: 0px;
+      margin-top: -12px;
+     
+    }
+
+    .footer{
+      margin-left: -530px;
+    }
+
+    #footer-p{
+      font-size: 11px;
+    } 
+  }
 
 }
