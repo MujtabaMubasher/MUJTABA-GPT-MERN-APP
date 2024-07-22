@@ -18,7 +18,7 @@ function Home() {
          mt: 3
        }}
       >
-        <Box>
+        <Box className = 'type-animation-box-Home'>
          <TypeAnimations/>
         </Box>
          <Box
