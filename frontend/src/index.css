@@ -73,7 +73,19 @@ html, body{
   font-size: 27px;
   text-align: center;
 }
+.input-fields-from-input-component{
+  
+  width: 400px;
+  /* border-radius: 20px;
+  font-size: 20px;
+  color: white;
+  margin-bottom: 40px;
+  background: black */
 
+}
+.login-signup-button{
+  width: 400px;
+}
 /*************Image Animation**********/
 
 .rotate {
@@ -214,6 +226,26 @@ html, body{
   #footer-p{
     font-size: 20px;
   } 
+  /************Login Responsive************ */
+   
+  .login-form{
+    margin-top: -50px;
+    margin-left: -500px;
+    width: 43%;
+  }
+  .input-fields-from-input-component{
+    width: 325px;
+  }
+
+  .login-signup-button{
+    width:325px;
+  }
+
+  /************Signup Responsive************ */
+  .signup-form{
+    width: 43%;
+    margin-left: -500px;
+  }
 
   /**********************IPhone************************/
   @media (min-width: 400px) {
