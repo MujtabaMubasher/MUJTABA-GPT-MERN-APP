@@ -81,9 +81,10 @@ function Signup() {
        marginRight={"30px"}
       >
        <form 
+          className="signup-form"
           onSubmit={handleSubmit}
           style={{
-            margin: "auto",
+            //margin: "auto",
             padding: "30px",
             boxShadow: "10px 10px 20px #000 ",
             borderRadius: "10px",
@@ -126,12 +127,13 @@ function Signup() {
               label = "Password"
             />
             <Button
+              className="login-signup-button"
               type="submit"
               sx = {{
                 px: 2,
                 py: 1,
                 mt: 2,
-                width: "400px",
+                //width: "400px",
                 borderRadius: 2,
                 bgcolor: "#00fffc",
                 color: "black",
