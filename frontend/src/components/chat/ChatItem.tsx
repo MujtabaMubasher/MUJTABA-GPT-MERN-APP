@@ -34,6 +34,7 @@ function ChatItem({ role, content }: { content: string, role: "user" | "assisten
     role === "assistent" ? 
     (
         <Box 
+        className = "chatItems-box-from-ChatItems-components"
          sx={{ 
                 display: "flex", 
                 p: 2, 
@@ -41,7 +42,7 @@ function ChatItem({ role, content }: { content: string, role: "user" | "assisten
                 my: 2, 
                 gap: 2, 
                 borderRadius: 5,
-                width: "97%" 
+                //width: "97%" 
           }}>
             <Avatar 
                 sx={{ 
@@ -49,14 +50,32 @@ function ChatItem({ role, content }: { content: string, role: "user" | "assisten
                     bgcolor: "transparent", 
                     marginTop: "-10px"
                 }}>
-               <img src="Logo.webp" alt="Bot" width={"40px"} />
+               <img
+               className='assistant-message-images-chatitems' 
+               src="Logo.webp" alt="Bot"  />
             </Avatar>
             <Box>
               {
                !codeBlock && (
                <Typography 
-                  fontSize={"20px"} 
-                  width={"100%"} 
+                  className='text-typography-chatItems'
+                  sx={{
+                    fontSize: {
+                      xs: '17px', // Small screen
+                      sm: '16px', // Medium screen
+                      md: '18px', // Larger screen
+                      lg: '20px', // Extra large screen
+                    },
+                    width: "100%",
+                    marginTop: {
+                      xs: '3px', // Small screen
+                      sm: '0px', // Medium screen
+                      md: '0px', // Larger screen
+                      lg: '0px', // Extra large screen
+                    },
+                  }}
+                  // fontSize={"20px"} 
+                  // width={"100%"} 
                   align={"justify"}
                >
                  {content}
@@ -67,16 +86,33 @@ function ChatItem({ role, content }: { content: string, role: "user" | "assisten
                 codeBlock.length > 0 &&
                 codeBlock.map((block)=> 
                  isCodeBlock(block)? (
-                  <SyntaxHighlighter 
+                  <SyntaxHighlighter
+                    className = "syntext-highlighter" 
                     style={coldarkDark}
                     language="javascript"
-                    customStyle={{maxWidth: "908px"}}
+                    //customStyle={{maxWidth: "908px"}}
                   >
                      {block}
                   </SyntaxHighlighter>
                  ) : 
                  (
-                  <Typography sx={{ fontSize: "20px" , width: "auto"}}>{block}</Typography> 
+                  <Typography 
+                    sx={{ 
+                      fontSize: {
+                        xs: '17px', // Small screen
+                        sm: '16px', // Medium screen
+                        md: '18px', // Larger screen
+                        lg: '20px', // Extra large screen
+                      },
+                      width: {
+                        xs: "97%",
+                        md: "100%",
+                        lg: "100%",
+                      },
+                   }}
+                   align={"justify"}
+                  >
+                  {block}</Typography> 
                  )
                 )  
               }
@@ -85,22 +121,52 @@ function ChatItem({ role, content }: { content: string, role: "user" | "assisten
     ) : 
     (
       <Box 
-          sx={{ 
-                display: "flex", 
-                p: 2, 
-                bgcolor: "#012a2b",
-                my: 2, 
-                gap: 2,
-                borderRadius: 3 ,
-                boxShadow: '0 4px 8px rgba(0, 0, 0, 0.9)',
-                width: "auto"
-            }}>
-            <Avatar sx={{ ml: "0", bgcolor: "#001616", fontSize: "23px",marginTop: "-5px"}}>
-              {auth?.user?.name ? auth.user.name[0] : 'U'}
-            </Avatar>
-            <Box>
-              <Typography fontSize={"20px"} width={"auto"}>{content}</Typography>
-            </Box>
+        className = "chatItems-box-from-ChatItems-components"
+        sx={{ 
+          display: "flex", 
+          p: 2, 
+          bgcolor: "#012a2b",
+          my: 2, 
+          gap: 2,
+          borderRadius: 3 ,
+          boxShadow: '0 4px 8px rgba(0, 0, 0, 0.9)',
+          //width: "auto"
+        }}
+      >
+        <Avatar sx={{ 
+          ml: "0",  
+          bgcolor:"#001616",             
+          fontSize: {
+            xs: '19px', // Small screen
+            sm: '16px', // Medium screen
+            md: '18px', // Larger screen
+            lg: '20px', // Extra large screen
+          },
+          marginTop: "-5px"}}>
+          {auth?.user?.name ? auth.user.name[0] : 'U'}
+        </Avatar>
+        <Box>
+         <Typography 
+           className='user-chat'
+           sx={{
+             width: "auto",
+             fontSize: {
+              xs: '17px', // Small screen
+              sm: '16px', // Medium screen
+              md: '18px', // Larger screen
+              lg: '20px', // Extra large screen
+            },
+            marginTop: {
+              xs: '3px', // Small screen
+              sm: '0px', // Medium screen
+              md: '0px', // Larger screen
+              lg: '0px', // Extra large screen
+            },
+           }}
+          >
+            {content}
+          </Typography>
+        </Box>
       </Box>
     )
   );
