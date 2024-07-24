@@ -289,7 +289,11 @@ function Chat() {
              sx={{
               ml:"auto",
               color: "white",
-              fontSize: "45px",
+              fontSize: {
+               xs:"30px",
+               md: "45px",
+               lg: "45px"
+              },
               marginTop: "18px",
               marginLeft: "10px",
               boxShadow: '0 4px 8px rgba(0, 0, 0, 0.9)',
