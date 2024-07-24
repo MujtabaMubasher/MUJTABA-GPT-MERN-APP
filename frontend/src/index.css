@@ -129,7 +129,8 @@ html, body{
 .chat-input-field{
   width: 93.7%;
   font-size: 20px;
-  margin-left: 10px
+  margin-left: 10px;
+  padding: 20px
 }
 
 /*************Image Animation**********/
@@ -337,7 +338,8 @@ html, body{
   .chat-input-field{
     width: 30.5%;
     font-size: 20px;
-    margin-left: 23px
+    margin-left: 23px;
+    padding: 0px 20px 0px 20px 
   }
 
   /**********************IPhone************************/
