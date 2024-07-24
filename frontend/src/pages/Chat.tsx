@@ -222,17 +222,18 @@ function Chat() {
             height: "",
           }}
         >
-          <div style={{ display: "flex" , marginTop: "-10px"}}>
-            <img src="MetaLogo.webp" alt="" style={{ width: "50px", marginRight: "15px"}} />
-            <span style={{fontSize:"25px"}}>Meta LLaMA-3</span>
+          <div className="Meta-Logo-text-typography-div" /*style={{ display: "flex" , marginTop: "-10px"}}*/>
+            <img className = "meta-logo"src="MetaLogo.webp" alt="" /*style={{ width: "50px", marginRight: "15px"}}*/ />
+            <span className = "Meta-LLaMA-3"/*style={{fontSize:"25px"}}*/>Meta LLaMA-3</span>
           </div>
         </Typography>
 
           <Box
+            className = "chat-display-box"
             ref={containerRef}
             sx={{
-              width: "88%",
-              height: "55vh",
+              //width: "88%",
+              //height: "55vh",
               borderRadius: 5,
               display: "flex",
               flexDirection: "column",
@@ -241,8 +242,8 @@ function Chat() {
               scrollBehavior: "smooth",
               mx: "auto",
               overflowY: "auto",
-              padding: "10px",
-              marginTop: "20px",
+              //padding: "10px",
+              //marginTop: "20px",
               alignContent: "start"
           
             }}
@@ -255,27 +256,29 @@ function Chat() {
 
           </Box>
 
-          <div style={{
-              width: "90%",
-              display: "flex",
-              marginTop: "20px",
-              
+          <div 
+              className="chat-input-field-div"
+              style={{
+              // width: "90%",
+              // display: "flex",
+              // marginTop: "20px",  
            }}
           >
             <input  
+            className="chat-input-field"
             type="text"
             ref={inputRef}
             style={{
               backgroundColor: "#023333",
               padding:"19px",
               marginTop: "20px",
-              width: "93.7%",
+              //width: "93.7%",
               borderRadius: "15px",
-              marginLeft: "10px",
+              //marginLeft: "10px",
               outline: "none",
               border: "none",
               color: "white",
-              fontSize: "20px",
+              //fontSize: "20px",
               boxShadow: '0 4px 8px rgba(0, 0, 0, 0.9)'
 
               }}
