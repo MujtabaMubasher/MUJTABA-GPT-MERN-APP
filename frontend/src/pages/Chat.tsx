@@ -270,7 +270,7 @@ function Chat() {
             ref={inputRef}
             style={{
               backgroundColor: "#023333",
-              padding:"19px",
+             // padding:"19px",
               marginTop: "20px",
               //width: "93.7%",
               borderRadius: "15px",
