@@ -332,7 +332,8 @@ html, body{
   .chat-input-field-div{
     width: 100%;
     display: flex;
-    margin-top: 30px;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   .chat-input-field{
