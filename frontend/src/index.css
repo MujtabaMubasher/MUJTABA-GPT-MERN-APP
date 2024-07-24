@@ -86,6 +86,52 @@ html, body{
 .login-signup-button{
   width: 400px;
 }
+
+.Meta-Logo-text-typography-div{
+  display: flex;
+  margin-top: -10px;
+}
+
+.meta-logo{
+  width: 50px; 
+  margin-right: 15px
+}
+
+.Meta-LLaMA-3{
+  font-size: 25px
+}
+
+.chat-display-box{
+  width: 88%;
+  height: 55vh;
+  padding: 10px;
+  margin-top: 20px;
+}
+
+.chatItems-box-from-ChatItems-components{
+  width: auto;
+}
+
+.assistant-message-images-chatitems{
+  width: 40px;
+}
+
+.syntext-highlighter{
+  font-size: 20px;
+  max-width: 908px;
+}
+
+.chat-input-field-div{
+  width: 90%;
+  display: flex;
+  margin-top: 20px;
+}
+.chat-input-field{
+  width: 93.7%;
+  font-size: 20px;
+  margin-left: 10px
+}
+
 /*************Image Animation**********/
 
 .rotate {
@@ -245,6 +291,53 @@ html, body{
   .signup-form{
     width: 43%;
     margin-left: -500px;
+  }
+
+  /************Chat Responsive************ */
+  .Meta-Logo-text-typography-div{
+    margin-top: 30px;
+    margin-left: -180px;
+  }
+
+  .meta-logo{
+    width: 40px; 
+    height: 23px;
+    margin-top: 2px;
+  }
+
+  .Meta-LLaMA-3{
+    font-size: 19px
+  }
+
+  .chat-display-box{
+    width: 100%;
+    height: 55vh;
+    padding: 20px;
+  }
+
+  .chatItems-box-from-ChatItems-components{
+    width: 358px;
+  }
+
+  .assistant-message-images-chatitems{
+    width: 35px;
+  }
+  
+  .syntext-highlighter{
+    font-size: 15px;
+    max-width: 290px;
+  }
+
+  .chat-input-field-div{
+    width: 100%;
+    display: flex;
+    margin-top: 30px;
+  }
+
+  .chat-input-field{
+    width: 30.5%;
+    font-size: 20px;
+    margin-left: 23px
   }
 
   /**********************IPhone************************/
