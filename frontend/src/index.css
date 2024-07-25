@@ -277,7 +277,7 @@ html, body{
    
   .login-form{
     margin-top: -50px;
-    margin-left: -550px;
+    margin-left: -530px;
     width: 43%;
   }
   .input-fields-from-input-component{
@@ -291,7 +291,7 @@ html, body{
   /************Signup Responsive************ */
   .signup-form{
     width: 43%;
-    margin-left: -550px;
+    margin-left: -530px;
   }
 
   /************Chat Responsive************ */
