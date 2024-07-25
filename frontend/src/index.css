@@ -425,6 +425,15 @@ html, body{
     #footer-p{
       font-size: 11px;
     } 
+
+    .chatItems-box-from-ChatItems-components{
+      width: 300px;
+    }
+
+    .syntext-highlighter{
+      font-size: 15px;
+      max-width: 240px;
+    }
   }
 
 }
