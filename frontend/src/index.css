@@ -317,7 +317,7 @@ html, body{
   }
 
   .chatItems-box-from-ChatItems-components{
-    width: 358px;
+    width: 300px;
   }
 
   .assistant-message-images-chatitems{
@@ -326,7 +326,7 @@ html, body{
   
   .syntext-highlighter{
     font-size: 15px;
-    max-width: 290px;
+    max-width: 2245px;
   }
 
   .chat-input-field-div{
@@ -337,7 +337,7 @@ html, body{
   }
 
   .chat-input-field{
-    width: 30.5%;
+    width: 25.5%;
     font-size: 20px;
     margin-left: 23px;
     padding: 0px 20px 0px 20px 
@@ -364,6 +364,19 @@ html, body{
 
     .footer{
       margin-left: -510px;
+    }
+
+    .chatItems-box-from-ChatItems-components{
+      width: 358px;
+    }
+
+    .chat-input-field{
+      width: 30.5%; 
+    }
+
+    .syntext-highlighter{
+      font-size: 15px;
+      max-width: 290px;
     }
   
   }
